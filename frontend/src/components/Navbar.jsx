@@ -37,7 +37,7 @@ const Navbar = () => {
             </div>
           )}
 
-          <div className="flex items-center gap-4 ml-auto">
+          <div className="flex items-center gap-3 ml-auto">
             {/* notifications */}
           <div className="flex items-center gap-3 sm:gap-4 ml-auto">
             <Link
@@ -48,9 +48,6 @@ const Navbar = () => {
             </Link>
           </div>
           
-          {/* theme selector component : todo */}
-          <ThemeSelector/>
-
           {/* avatar */}
           <Link to="/">
           <div className="avatar">
@@ -61,6 +58,9 @@ const Navbar = () => {
             </div>
           </div>
           </Link>
+
+          {/* theme selector component : todo */}
+          <ThemeSelector/>
 
           {/* feedback */}
           <div className="flex items-center gap-3 sm:gap-4">
