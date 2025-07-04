@@ -52,13 +52,15 @@ const Navbar = () => {
           <ThemeSelector/>
 
           {/* avatar */}
+          <Link to="/">
           <div className="avatar">
             <div className="w-9 rounded-full">
-              <Link to="/">
-              <img src={authUser?.profilePic} alt="User avatar" />
-              </Link>
+              
+               <img src={authUser?.profilePic} alt="User avatar" />
+              
             </div>
           </div>
+          </Link>
 
           {/* feedback */}
           <div className="flex items-center gap-3 sm:gap-4">

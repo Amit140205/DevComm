@@ -71,7 +71,7 @@ const HomePage = () => {
   }, [outGoingFriendRequests]);
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8">
+    <div className="min-h-screen bg-base-200 p-4 sm:p-6 lg:p-8">
       <div className="container mx-auto space-y-10">
         {/* adding a header => include "your friends and button(link to notification page)" */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
