@@ -1,0 +1,54 @@
+// 1. setting up vite => react
+// 2. configure tailwind
+// 3. here we are using daisyUI component library
+(configure that as well)
+// 4. react-hot-taost => for using cool notifications 
+(npm i react-hot-toast)
+
+usecase : 
+import toast, { Toaster } from "react-hot-toast"
+<button onClick={()=>toast.success("Hello react")}>craete a toast</button>
+<Toaster/>
+
+// 5. using tanstack query => Powerful asynchronous state management for TS/JS, React, Solid, Vue, Svelte and Angular
+(we can use normal fetch method to retrieve data from the declared endpoints,
+but, to more optimise this procees, we can use tanstack query
+we can also do the same using same fetch method,useEffect hook and others)
+
+//https://tanstack.com/query/latest/docs/framework/react/installation
+
+***another important thing about tanstack(useQuery()) is that it tries to fetch data again and again for failure(but can avoid 
+that multiple attempts using {retry : false})
+unlike in useEffect(), it tries only once
+ 
+usecase : 
+const {data,isLoading,error} = useQuery({
+    queryKey:["todos"],
+
+    queryFn: async () => {
+      const res = await fetch("https://jsonplaceholder.typicode.com/todos")
+      const data = await res.json()
+      return data
+    }
+  })
+// can be also implemented using axios
+
+const data = await axios.get("https://jsonplaceholder.typicode.com/todos")
+return data
+
+//proper implementation understanding
+const {data,isLoading,error} = useQuery({
+    queryKey:["todos"],
+
+    queryFn: async () => {
+      const data = await axios.get("https://jsonplaceholder.typicode.com/todos")
+      // const data = await res.json()
+      return data
+    }
+  })
+
+  console.log({data})
+  console.log({isLoading})
+  console.log({error})
+
+// 6. setting up axios in a separate file for reusability

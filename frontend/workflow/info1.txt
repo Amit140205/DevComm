@@ -1,0 +1,18 @@
+// 1. signup page
+for side image use : https://storyset.com/
+******protect the routes
+//using a package "lucide-react" for icons
+
+// 2. spinning animation during loading
+
+// 3. implementing custom hook to wrap up useQuery() hook,
+so that, we do not have to write useQuery() hook, every single time to check whether the user is authorized or not
+
+// 4. onboarding page
+
+=> useMutation : To create, update, or delete data 
+=> useQuery : To fetch data from a server
+
+// 5. login page
+=> we can implement custom hook useLogin() to clean our code a little bit 
+=> also wrap the signup page's useMutation() hook insine useSignup() custom hook

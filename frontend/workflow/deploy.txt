@@ -1,0 +1,48 @@
+// here we are using Render for deployment
+
+// first we have to understand the deplyment facts
+// frontend => running on port 5173
+// backend => running on port 3000
+
+// now we want that, our frontend and backend run on same port,
+// such that user hit the baseurl can access both
+
+1. initialize a package.json out of the backend and frontend folder
+ => npm init
+then we have to add a script in the package.json file present in the backend
+=> "start": "node src/server.js"
+
+//now we have to understand one thing
+//to deploy the webapp, we have to this into github => where we do not have node_modules
+//now how "render" => (where we deploy) => know about this modules which we are using
+
+//for that we have to add a script in the package.json that we have recently added outside of the frontend & backend directory
+
+=> delete the node_modules in both frontend and backend directory
+=> "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend"
+
+here we are doing three things
+1. install all the node modules used in backend
+2. install all the node modules used in frontend
+3. build the react app for production (basically optimise the code into simple html,css,js)
+
+//after that we get => dist directory in the frontend directory
+
+=> "start": "npm run start --prefix backend"
+// to start the backend server
+
+// now we have to configure the server.js in backend
+
+// now main thing to understand what we have done in server.js
+
+// we explicitly tell that => other than pre-defined routes in server.js
+// any get request in the server send the user, index.html file which is basically 
+// the optimised version of our react app which we have recently build
+
+// also we have to change the axios baseurl in frontend
+
+// now ultimately
+// we can access our backend-frontend from the same url/domain
+like : http://localhost:5001
+
+//push the project into git repo

@@ -1,0 +1,25 @@
+// 1. we are going to design home page
+for that we have to create a layout (kind of => navbar,sidebar,main-content)
+
+// 2. build the layout component
+// 3. working on sidebar component
+=> introduction of new hook useLocation()
+// 4. working on sidebar
+
+// 5. most important => for global state management we are going to use "zustand"
+kind of similar to context-api and redux toolkit usage wise
+=> making a new custom hook useThemeSelector()
+
+// 6. start implementing home page
+
+// 7. notifications page
+
+// 8. chat page
+**** set up stream
+=> npm i stream-chat stream-chat-react
+=> for chatting and video-calling we need streamToken, that we get from the endpoint that we made in the backend
+=> creating chatClient and chatChannel
+=> make sure to import "import 'stream-chat-react/dist/css/v2/index.css';"
+
+// 9. video-call configure
+=> aim is to send a url, user taps it and joins the video call

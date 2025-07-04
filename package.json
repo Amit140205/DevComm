@@ -1,0 +1,13 @@
+{
+  "name": "streamwebapp",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Amit Mondal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  }
+}
