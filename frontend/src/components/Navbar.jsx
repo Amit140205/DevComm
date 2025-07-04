@@ -54,7 +54,9 @@ const Navbar = () => {
           {/* avatar */}
           <div className="avatar">
             <div className="w-9 rounded-full">
+              <Link to="/">
               <img src={authUser?.profilePic} alt="User avatar" />
+              </Link>
             </div>
           </div>
 
