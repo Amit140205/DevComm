@@ -219,14 +219,3 @@ cd frontend && npm run build
 
 ---
 
-## 👨‍💻 Developer
-
-**Amit Mondal** — Final-year B.Tech CSE student (graduating June 2026)
-
-> Built DevComm to make real-time developer communication intuitive, efficient, and fun.
-
----
-
-## 📄 License
-
-This project is open source. Feel free to fork, star ⭐, and build on top of it!
