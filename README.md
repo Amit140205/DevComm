@@ -6,6 +6,12 @@ A real-time communication platform tailored for developers — featuring live ch
 
 ---
 
+## 🌐 Live Demo
+
+- **Frontend:** [https://devcomm-1ju6.onrender.com](https://devcomm-1ju6.onrender.com)
+
+---
+
 ## ✨ Features
 
 - **Authentication** — Secure sign up / login with JWT stored in httpOnly cookies
